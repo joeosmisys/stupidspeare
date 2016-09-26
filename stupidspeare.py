@@ -93,6 +93,8 @@ class StupidSpeare(irc.bot.SingleServerIRCBot):
             # hiss at buzzfeed/huffpost, characters greater than 128, and on the word 'moist'
             if 'buzzfeed.com' in message_text or 'huffingtonpost.com' in message_text:
                 connection.privmsg(event.target, 'hisss fuck off with your huffpost buzzfeed crap')
+            elif 'y tho' in message_text:
+                connection.privmsg(event.target, 'http://i.imgur.com/yNlQWRM.jpg')
             elif not all(ord(c) < 128 for c in event.arguments[0]) or 'moist' in message_text:
                 connection.privmsg(event.target, 'hisss')
         print('PUBMSG: ' + event.arguments[0])
